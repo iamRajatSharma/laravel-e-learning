@@ -40,6 +40,6 @@ Route::get('/admin/report_student', [AdminController::class, 'report_student']);
 Route::get('/admin/logout', [AdminController::class, 'logout']);
 
 // admin urls post methods
-// Route::post('/admin/save_category', [AdminController::class, 'save_category']);
-// Route::post('/admin/update_category', [AdminController::class, 'update_category']);
+Route::post('/admin/save_category', [AdminController::class, 'save_category']);
+Route::post('/admin/update_category', [AdminController::class, 'update_category']);
 // Route::post('/admin/save_course', [AdminController::class, 'save_course']);

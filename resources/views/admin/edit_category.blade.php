@@ -19,7 +19,7 @@
                         <form class="edit-profile m-b30" action="{{ URL('admin/update_category') }}" method="POST">
                             @csrf
                             @foreach($data as $item)
-                            <input type="hidden" name="id" value="{{ $item['id'] }}">
+                            <input type="hidden" name="id" value="{{ $item->id }}">
                             <div class="row">
                                 <div class="col-12">
                                     @if(session('success'))
@@ -39,7 +39,7 @@
                                 <div class="form-group col-6">
                                     <label class="col-form-label">Change Category Name</label>
                                     <div>
-                                        <input class="form-control" type="text" name="name" placeholder="Enter Category Name" value="{{ $item['name'] }}">
+                                        <input class="form-control" type="text" name="name" placeholder="Enter Category Name" value="{{ $item->name }}">
                                         <span class="error">@error('name') {{ $message }} @enderror</span>
                                     </div>
                                 </div>

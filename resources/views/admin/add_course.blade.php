@@ -36,9 +36,7 @@
                                     <div>
                                         <select name="" id="" class="form-control" name="category">
                                             <option value="" hidden=''>Select Course Category</option>
-                                            @foreach($category as $cat)
-                                                <option value="{{ $cat['name']."#".$cat['id'] }}">{{ ucfirst($cat['name']) }}</option>
-                                            @endforeach
+                                           
                                         </select>
                                         <span class="error">@error('category') {{ $message }} @enderror</span>
                                     </div>
@@ -137,9 +135,7 @@
                                     <div>
                                         <select name="" id="" class="form-control" name="teacher_email">
                                             <option value="" hidden=''>Course Instructor Email</option>
-                                            @foreach($teachers as $teach)
-                                                <option value="{{ $teach['name']."#".$teach['email'] }}">{{ ucfirst($teach['name']) }}</option>
-                                            @endforeach
+                                            
                                         </select>
                                         <span class="error">@error('teacher_email') {{ $message }} @enderror</span>
                                     </div>

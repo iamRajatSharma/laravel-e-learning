@@ -36,13 +36,13 @@
                         @foreach($data as $item)
                         <tr class="text-center">
                             <td>{{ $i++ }}</td>
-                            <td>{{ $item['id'] }}</td>
-                            <td>{{ ucfirst($item['name']) }}</td>
-                            <td>{{ $item['count'] }}</td>
+                            <td>{{ $item->id }}</td>
+                            <td>{{ ucfirst($item->name) }}</td>
+                            <td>{{ $item->count }}</td>
                             <td>
-                                @if($item['count']==0)
-                                    <a onclick="return edit_confirm()" href="edit_category/{{ $item['id'] }}" class="btn btn-primary">Edit</a>
-                                    <a onclick="return delete_confirm()" href="delete_category/{{ $item['id'] }}" class="btn btn-danger">Delete</a>
+                                @if($item->count==0)
+                                    <a onclick="return edit_confirm()" href="edit_category/{{ $item->id }}" class="btn btn-primary">Edit</a>
+                                    <a onclick="return delete_confirm()" href="delete_category/{{ $item->id }}" class="btn btn-danger">Delete</a>
                                 @else
                                     <div class="btn">
                                         NOT ALLOWED
@@ -52,7 +52,7 @@
                         </tr>
                         <script>
                             function edit_confirm(){
-                                const ask = confirm("You want to edit the {{ $item['name'] }} category")
+                                const ask = confirm("You want to edit the {{ $item->name }} category")
                                 if(ask){
                                     return true;
                                 }
@@ -61,7 +61,7 @@
                                 }
                             }
                             function delete_confirm(){
-                                const ask = confirm("You want to delete the {{ $item['name'] }} category")
+                                const ask = confirm("You want to delete the {{ $item->name }} category")
                                 if(ask){
                                     return true;
                                 }
